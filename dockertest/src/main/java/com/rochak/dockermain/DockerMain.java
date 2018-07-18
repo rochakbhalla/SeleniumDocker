@@ -14,7 +14,6 @@ import com.github.dockerjava.api.model.Ports.Binding;
 import com.github.dockerjava.core.DockerClientBuilder;
 import com.github.dockerjava.core.command.PullImageResultCallback;
 
-//import dockertest.RunningTestOnDocker;
 
 
 public class DockerMain {
@@ -104,10 +103,6 @@ public class DockerMain {
 		}
 	}
 
-	public void browserTest() throws Exception {
-		
-		
-	}
 
 	public void stopContainer() {
 
