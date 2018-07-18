@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DockerTestSuite">
+  <test thread-count="1" name="DefaultTest">
+    <classes>
+      <class name="com.rochak.dockertest.DockerTests"/>
+    </classes>
+  </test> <!-- DefaultTest -->
+</suite> <!-- DockerTestSuite -->

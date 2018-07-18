@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="DockerTestSuite" duration-ms="24285" started-at="2018-07-18T13:14:04Z" finished-at="2018-07-18T13:14:28Z">
+    <groups>
+    </groups>
+    <test name="DefaultTest" duration-ms="24285" started-at="2018-07-18T13:14:04Z" finished-at="2018-07-18T13:14:28Z">
+      <class name="com.rochak.dockertest.DockerTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.rochak.dockertest.DockerTests@5542c4ed]" name="setUp" is-config="true" duration-ms="1346" started-at="2018-07-18T13:14:04Z" finished-at="2018-07-18T13:14:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testStartContianerWithDebugPorts()[pri:0, instance:com.rochak.dockertest.DockerTests@5542c4ed]" name="testStartContianerWithDebugPorts" duration-ms="10924" started-at="2018-07-18T13:14:05Z" finished-at="2018-07-18T13:14:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStartContianerWithDebugPorts -->
+        <test-method status="PASS" signature="testBrowserTest()[pri:1, instance:com.rochak.dockertest.DockerTests@5542c4ed]" name="testBrowserTest" duration-ms="11940" started-at="2018-07-18T13:14:16Z" finished-at="2018-07-18T13:14:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrowserTest -->
+      </class> <!-- com.rochak.dockertest.DockerTests -->
+    </test> <!-- DefaultTest -->
+  </suite> <!-- DockerTestSuite -->
+</testng-results>
