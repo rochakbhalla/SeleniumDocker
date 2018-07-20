@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.io.FileNotFoundException;
@@ -16,17 +17,24 @@ import com.rochak.dockermain.DockerMain;
 
 public class DockerTests {
 
-	DockerMain etm = new DockerMain();
-	
+	DockerMain etm = new DockerMain();	
+
 	@BeforeTest
 	public void setUp() throws FileNotFoundException, InterruptedException {
 		etm.verifyImage();
 	}
 
+	@Test(priority = 0, enabled = false)
+	public void testStartContianer() {
+
+		etm.startContainer();
+	}
+
 	@Test(priority = 0, enabled = true)
 	public void testStartContianerWithDebugPorts() {
 
-		etm.startContianerWithDebugPorts();
+		
+		etm.startContainerWithDebugPorts();
 	}
 
 	@Test(priority = 1)
@@ -37,7 +45,7 @@ public class DockerTests {
         URL selenium_standalone_host = new URL("http://0.0.0.0:32769/wd/hub");
        
         WebDriver driver = new RemoteWebDriver(selenium_standalone_host, dcap);
-
+					Thread.sleep(50000);
         			System.out.println("****** Test Started ******");
         		   driver.get("http://www.spicejet.com");
         		  //driver.manage().window().maximize();
@@ -61,8 +69,9 @@ public class DockerTests {
 	}
 
 	
-//	@AfterTest
-//	public void tearDown() {
-//		etm.stopContainer();
-//	}
+	@AfterTest
+	public void tearDown() {
+		etm.stopContainer();
+	}
+	
 }

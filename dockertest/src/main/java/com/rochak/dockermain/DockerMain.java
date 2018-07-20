@@ -17,7 +17,7 @@ import com.github.dockerjava.core.command.PullImageResultCallback;
 
 
 public class DockerMain {
-
+	
 	private ExposedPort TCP_4444 = ExposedPort.tcp(4444);
 	private ExposedPort TCP_5900 = ExposedPort.tcp(5900);
 	private int port = 32769;
@@ -32,6 +32,8 @@ public class DockerMain {
 	private String image_repo = debug_image_name + ":" + image_tag;
 	private static final DockerClient dockerClient = DockerClientBuilder.getInstance().build();
 
+	
+	
 	public void verifyImage() throws InterruptedException, FileNotFoundException {
 		// Checks if image is present else pulls from repository
 
@@ -84,7 +86,7 @@ public class DockerMain {
 		}
 	}
 
-	public void startContianerWithDebugPorts() {
+	public void startContainerWithDebugPorts() {
 
 		PortBinding server_port = new PortBinding(Binding.bindIpAndPort(hostIp, port), TCP_4444);
 		PortBinding debug_port = new PortBinding(Binding.bindIpAndPort(hostIp, debugPort), TCP_5900);
