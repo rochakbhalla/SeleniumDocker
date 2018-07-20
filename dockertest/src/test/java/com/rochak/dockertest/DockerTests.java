@@ -45,7 +45,7 @@ public class DockerTests {
         URL selenium_standalone_host = new URL("http://0.0.0.0:32769/wd/hub");
        
         WebDriver driver = new RemoteWebDriver(selenium_standalone_host, dcap);
-					Thread.sleep(50000);
+					Thread.sleep(20000);
         			System.out.println("****** Test Started ******");
         		   driver.get("http://www.spicejet.com");
         		  //driver.manage().window().maximize();
